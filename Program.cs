@@ -19,8 +19,15 @@ namespace Lab_4_1_13
             for (int i = 0; i < A.Length; i++)            
                 for (int j = 0; j < B.Length; j++)                
                     if (A[i] == B[j])
-                        Console.Write(A[i] + " ");            
-            Console.ReadKey();
+                        Console.Write(A[i] + " ");
+            Console.WriteLine("\n");
+
+            // Linq
+            var res = A.Intersect(B);
+            foreach (var item in res)            
+                Console.Write(item + " ");
+
+            Console.ReadKey();            
         }
     }
 }
